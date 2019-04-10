@@ -1,0 +1,14 @@
+{
+  "name": "aula2",
+  "version": "1.0.0",
+  "description": "aula 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "william walder",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^13.2.2"
+  }
+}
