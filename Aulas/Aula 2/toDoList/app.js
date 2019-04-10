@@ -1,3 +1,4 @@
+//debuggar no chrome: node --inspect-brk app.js criar --name william --description "meu nome"
 const yargs = require('yargs')
 const taskUtil = require('./util/taskUtil.js')
 
@@ -34,7 +35,7 @@ yargs.command({
         }
     },
     handler : function(argv){
-        console.log(argv.name)
+        taskUtil.removerTask(argv.name)
     }
 })
 
@@ -49,7 +50,7 @@ yargs.command({
         }
     },
     handler : function(argv){
-        console.log(argv.name)
+        taskUtil.listarPorNome(argv.name)
     }
 })
 
@@ -57,6 +58,7 @@ yargs.command({
     command : 'listarAll',
     describe: 'listar todas as tarefas',
     handler : function(argv){
+        taskUtil.listarTasks()
     }
 })
 
